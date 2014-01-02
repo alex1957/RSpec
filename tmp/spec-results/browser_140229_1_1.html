@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="k-ff k-ff26"><head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="This demo shows the basic functionality of Kendo UI slider widget, included in Kendo UI Web framework." name="description" />
+    <title>Kendo jQuery Slider Control Demo</title>
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.rtl.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.silver.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.dataviz.silver.min.css" />
+    <link rel="stylesheet" href="/content/shared/styles/telerik-navigation.css" />
+<script src="//www.google-analytics.com/ga.js"></script><script>var _gaq=[["_setAccount","UA-23480938-1"],["_setDomainName",".kendoui.com"],["_addIgnoredRef","kendoui.com"],["_trackPageview"]];(function(d,s){var g=d.createElement(s),e=d.getElementsByTagName(s)[0];g.src="//www.google-analytics.com/ga.js";e.parentNode.insertBefore(g,e);}(document,"script"))</script> 
+    <link rel="stylesheet" href="/content/shared/styles/examples.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2013.3.1119/js/kendo.all.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2013.3.1119/js/kendo.timezones.min.js"></script>
+    <script src="/content/shared/js/examples.js"></script>
+    <script src="/content/shared/js/console.js"></script>
+    <script src="/content/shared/js/prettify.js"></script>
+    <script src="/content/shared/js/telerik-navigation.js"></script>
+</head>
+<body>
+    <div id="telerik-navi">
+  <div id="telerik-main">
+    <ul class="inner" id="telerik-products">
+      <li class="dev-tools">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/dev-tools']);" href="//www.telerik.com/developer-productivity-tools.aspx">
+          <h2><small>.NET Developer Tools </small>DevTools</h2>
+          <p>UI Controls For</p>
+          <ul>
+            <li>• ASP.NET AJAX, ASP.NET MVC</li>
+            <li>• WPF, Silverlight, WinForms</li>
+            <li>• Windows 8, Windows Phone</li>
+          </ul>
+          <p>Reporting and Data Access Tools</p><br />
+          <p>Productivity Tools</p>
+          <ul>
+            <li>• Refactoring and Code Analysis</li>
+            <li>• Mocking, Decompiling, Tracing</li>
+          </ul>
+          <p>DevCraft Value Bundles</p>
+        </a>
+      </li>
+      <li class="kendo">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/kendo-ui']);" href="//www.kendoui.com">
+          <h2><small>HTML5 / JavaScript Development </small>Kendo UI</h2>
+          <p>Everything you need to build sites and mobile apps with JavaScript and HTML5</p>
+        </a>
+      </li>
+      <li class="icenium">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/icenium']);" href="//www.icenium.com/">
+          <h2><small>Hybrid Mobile Development </small>Icenium</h2>
+          <p>Cross-platform Mobile Development Tool with cloud-based architecture</p>
+        </a>
+      </li>
+      <li class="test-studio">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/test-studio']);" href="//www.telerik.com/automated-testing-tools/">
+          <h2><small>Software Testing Tools </small>Test Studio</h2>
+          <p>One easy tool for Functional, Performance, Load and Mobile software testing</p>
+        </a>
+      </li>
+      <li class="eqatec">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/eqatec']);" href="//www.telerik.com/analytics/">
+          <h2><small>Application Analytics </small>EQATEC</h2>
+          <p>Real-time usage monitoring and app insights for mobile, web and desktop applications.</p>
+        </a>
+      </li>
+      <li class="sitefinity">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/sitefinity']);" href="//www.sitefinity.com">
+          <h2><small>Online Business Platform </small>Sitefinity CMS</h2>
+          <p>Everything for your online business - content management, ecommerce, emarketing</p>
+        </a>
+      </li>
+      <li class="team-pulse">
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/teampulse']);" href="//www.telerik.com/agile-project-management-tools/">
+          <h2><small>Agile Project Management </small>TeamPulse</h2>
+          <p>Simple and intuitive project management and collaboration software</p>
+        </a>
+      </li>
+    </ul>
+
+    <div id="sitenav-contacts">
+      <div class="inner">
+        <div class="call-us">
+          <h3>Contact us</h3>
+          <span>We are here for you.</span>
+        </div>
+        <ul>
+          <li class="us">+1‒888‒365‒2779</li>
+          <li class="uk">+44‒20‒7291‒0580</li>
+          <li class="bg">+359‒2‒8099850</li>
+          <li class="de">+49‒89‒2441642‒70</li>
+          <li class="au">+61‒2‒8090‒1465</li>
+          <li class="mail"><a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/sales-mail']);" href="mailto:sales@telerik.com">sales@telerik.com</a></li>
+        </ul>
+        <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/sign-in']);" class="your-account" href="//www.telerik.com/account">Your account <span>Access to your products, updates and support</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="telerik-bar">
+    <div class="inner">
+      <a onclick="_gaq.push(['_trackPageview', '/top-nav/site-nav/telerik-logo']);" title="Telerik" href="//www.telerik.com" id="telerik-logo"><img width="107" height="35" alt="Telerik" src="//www.telerik-web-assets.com/shared/telerik-navigation/img/telerik-logo.png" /><span id="telerik-slogan"></span></a>
+      <span id="toggle-main">Product Families</span>
+
+      <ul id="telerik-menu">         
+          <li id="toggle-about-us-menu">ABOUT US<span class="arrow"></span>
+            <div class="telerik-menu-panel" id="telerik-about-us-panel">
+              <h3>About Telerik</h3>
+              <ul>
+                <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/company']);" href="//www.telerik.com/company.aspx">Company</a></li>
+                <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/press-center']);" href="//www.telerik.com/company/press-center.aspx">Press Center</a></li>
+                <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/customers']);" href="//www.telerik.com/company/customers.aspx">Customers</a></li>
+                <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/community']);" href="//www.telerik.com/community.aspx">Community</a></li>
+                <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/careers']);" href="//www.telerik.com/company/careers.aspx">Careers</a></li>
+                <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/contacts']);" href="//www.telerik.com/company/contact-us.aspx">Contacts</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+    <div id="header">
+    <div class="centerWrap floatWrap">
+        <h1><a id="logo" href="/">Kendo UI - the Art of Web Development</a></h1>
+        <ul class="kendo-nav">
+    <li><a href="#expand">Products <span>▼</span></a>
+        <ol class="submenu-box">
+            <li><a href="http://www.kendoui.com/web.aspx">Kendo UI Web</a></li>
+            <li><a href="http://www.kendoui.com/mobile.aspx">Kendo UI Mobile</a></li>
+            <li><a href="http://www.kendoui.com/dataviz.aspx">Kendo UI DataViz</a></li>
+            <li><a href="http://www.kendoui.com/server-wrappers.aspx">Server Side Wrappers</a></li>
+        </ol>
+    </li>
+    <li class="active"><a href="http://demos.kendoui.com/">Demos</a></li>
+    <li><a onclick="_gaq.push(['_trackPageview', '/top-nav/purchase']);" href="http://www.kendoui.com/purchase.aspx">Purchase</a></li>
+    <li><a onclick="_gaq.push(['_trackPageview','/download-button']);" class="get-kendoui" href="http://www.kendoui.com/download.aspx">Download</a></li>
+</ul>
+
+    </div>
+</div>
+
+<div id="banner"></div>
+
+<div class="suite-demos-nav">
+    <ul class="centerWrap floatWrap">
+        <li><a href="/">Overview</a><em></em></li>
+        <li class="active"><a href="/web/overview/index.html" class="selected" id="web">Web Demos</a></li>
+        <li><a href="/mobile" class="" id="mobile">Mobile Demos</a></li>
+        <li><a href="/dataviz/overview/index.html" class="" id="dataviz">DataViz Demos</a></li>
+        <li><a href="/themebuilder/web.html">Theme Builders</a></li>
+    </ul>
+</div>
+
+
+    <div class="demos-nav widgetGrid">
+        <div class="centerWrap floatWrap">
+                <div class="wideCol floatWrap ">
+                    <h2>UI Widgets</h2>
+                    <ul>
+                                <li>
+                                    <a target="" href="/web/autocomplete/index.html">AutoComplete </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/button/index.html" class="new-widget">Button </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/calendar/index.html">Calendar </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/colorpicker/index.html">ColorPicker </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/combobox/index.html">ComboBox </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/datepicker/index.html">DatePicker </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/datetimepicker/index.html">DateTimePicker </a>
+                                </li>
+</ul><ul>                                <li>
+                                    <a target="" href="/web/dropdownlist/index.html">DropDownList </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/editor/index.html">Editor </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/grid/index.html">Grid </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/listview/index.html">ListView </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/menu/index.html">Menu </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/multiselect/index.html">MultiSelect </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/numerictextbox/index.html">NumericTextBox </a>
+                                </li>
+</ul><ul>                                <li>
+                                    <a target="" href="/web/panelbar/index.html">PanelBar </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/progressbar/index.html" class="new-widget">ProgressBar </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/scheduler/index.html">Scheduler </a>
+                                </li>
+                                <li class="active">
+                                    <a target="" href="/web/slider/index.html">Slider </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/splitter/index.html">Splitter </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/tabstrip/index.html">TabStrip </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/timepicker/index.html">TimePicker </a>
+                                </li>
+</ul><ul>                                <li>
+                                    <a target="" href="/web/tooltip/index.html">Tooltip </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/treeview/index.html">TreeView </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/upload/index.html">Upload </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/window/index.html">Window </a>
+                                </li>
+</ul>
+                </div>
+                <div class="narrowCol floatWrap framework">
+                    <h2>Framework</h2>
+                    <ul>
+                                <li>
+                                    <a target="" href="/web/datasource/index.html">DataSource </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/templates/index.html">Templates </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/mvvm/index.html">MVVM </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/spa/index.html">Single-Page App </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/fx/expand.html">Effects </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/dragdrop/index.html">Drag &amp; Drop </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/validator/index.html">Validator </a>
+                                </li>
+</ul><ul>                                <li>
+                                    <a target="" href="/web/globalization/index.html">Globalization </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/styling/index.html">Styling </a>
+                                </li>
+                                <li>
+                                    <a target="" href="/web/integration/index.html">Integration </a>
+                                </li>
+</ul>
+                </div>
+                <div class="narrowCol floatWrap dashboards">
+                    <h2>Sample Applications</h2>
+                    <ul>
+                                <li>
+                                    <a target="_blank" href="/websushi/">
+                                        <img alt="websushi" src="/content/web/overview/websushi-dash.gif" />
+                                    </a>
+                                    <a target="_blank" href="/websushi/">Sushi </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="/aeroviewr/">
+                                        <img alt="aeroviewr" src="/content/web/overview/aeroviewr-dash.gif" />
+                                    </a>
+                                    <a target="_blank" href="/aeroviewr/">AeroViewr </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="/bootstrap/">
+                                        <img alt="bootstrap" src="/content/web/overview/bootstrap-dash.gif" />
+                                    </a>
+                                    <a target="_blank" href="/bootstrap/">Bootstrap </a>
+                                </li>
+</ul>
+                </div>
+
+
+        </div>
+    </div>
+
+    <div class="flowers-left"><div class="flowers-right">
+        <div id="mainWrap" class="centerWrap floatWrap">
+            <div style="" id="themeWrap">
+                <span style="" id="themeChooser" data-role="themechooser" class="k-theme-chooser"><span class="tc-choose-theme">Choose theme:</span><a href="#" class="tc-link k-state-selected"><span class="tc-theme-name">Silver</span><span class="k-icon k-i-arrow-s"></span></a></span>
+                <a style="display:inline-block" class="get-kendoui" href="http://docs.kendoui.com/api/web/slider">Documentation</a>
+            </div>
+
+            <div class="floatWrap clear" id="mainWrapInner">
+<div id="examples-nav">
+    <div id="nav-pager">
+    <a data-widget="/mobile/adaptive/scheduler.html" href="/mobile/adaptive/scheduler.html" class="prev k-link">Prev</a>
+     | 
+    <a data-widget="/web/splitter/index.html" href="/web/slider/events.html" class="next k-link">Next</a>
+</div>
+
+    <ul id="examples-list">
+            <li class="active">
+                <a href="/web/slider/index.html">Basic usage</a>
+            </li>
+            <li class="">
+                <a href="/web/slider/events.html">Events</a>
+            </li>
+            <li class="">
+                <a href="/web/slider/api.html">API</a>
+            </li>
+            <li class="">
+                <a href="/web/slider/rtl.html">RTL support</a>
+            </li>
+            <li class="">
+                <a href="/web/slider/navigation.html">Keyboard navigation</a>
+            </li>
+            <li class="">
+                <a href="/web/slider/mvvm.html">MVVM</a>
+            </li>
+    </ul>
+
+
+<a class="get-kendoui" href="http://www.kendoui.com/download.aspx">Get Kendo UI</a>
+</div>
+
+            
+<div id="main">
+    <h1 id="exampleTitle">
+            <span class="exampleIcon sliderIcon"></span>
+            <strong>Slider /</strong> Basic usage    </h1>
+
+    <div id="exampleWrap" style="visibility: visible;">
+        <script>preventFOUC()</script>
+
+<div class="k-content" id="example">
+    <div id="wrapper">
+        <div class="k-widget k-slider k-slider-horizontal balSlider k-state-default"><div class="k-slider-wrap k-slider-buttons"><a class="k-button k-button-increase"><span title="Right" class="k-icon k-i-arrow-e">Right</span></a><a class="k-button k-button-decrease"><span title="Left" class="k-icon k-i-arrow-w">Left</span></a><ul class="k-reset k-slider-items"><li role="presentation" class="k-tick k-first" style="width: 8px;" title="-10"> </li><li role="presentation" class="k-tick" style="width: 18px;" title="-8"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="-6"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="-4"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="-2"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="0"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="2"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="4"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="6"> </li><li role="presentation" class="k-tick" style="width: 17px;" title="8"> </li><li role="presentation" class="k-tick k-last" style="width: 9px;" title="10"> </li></ul><div class="k-slider-track" style="width: 170px;"><div class="k-slider-selection" style="width: 119px;"><!-- --></div><a aria-valuenow="4" aria-valuemax="10" aria-valuemin="-10" role="slider" title="drag" class="k-draghandle" href="#" tabindex="0" style="left: 112px;" data-role="draggable" aria-valuetext="4">Drag</a></div><input type="text" value="0" class="balSlider" id="slider" data-role="slider" style="display: none;" /></div></div>
+        <div id="equalizer">
+            <div class="k-widget k-slider k-slider-vertical eqSlider k-state-default"><div class="k-slider-wrap"><ul class="k-reset k-slider-items"><li role="presentation" class="k-tick k-last k-tick-large" style="height: 1px;" title="20"><span class="k-label">20</span></li><li role="presentation" class="k-tick" style="height: 4px;" title="19"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="1"> </li><li role="presentation" class="k-tick k-tick-large" style="height: 3px; line-height: 3px;" title="0"><span class="k-label">0</span></li><li role="presentation" class="k-tick" style="height: 3px;" title="-1"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-19"> </li><li role="presentation" class="k-tick k-first k-tick-large" style="height: 2px;" title="-20"><span class="k-label">-20</span></li></ul><div class="k-slider-track" style="height: 120px;"><div class="k-slider-selection" style="height: 90px;"><!-- --></div><a aria-valuenow="10" aria-valuemax="20" aria-valuemin="-20" role="slider" title="drag" class="k-draghandle" href="#" tabindex="0" style="bottom: 83px;" data-role="draggable">Drag</a></div><input type="text" value="10" class="eqSlider" data-role="slider" style="display: none;" /></div></div>
+            <div class="k-widget k-slider k-slider-vertical eqSlider k-state-default"><div class="k-slider-wrap"><ul class="k-reset k-slider-items"><li role="presentation" class="k-tick k-last k-tick-large" style="height: 1px;" title="20"><span class="k-label">20</span></li><li role="presentation" class="k-tick" style="height: 4px;" title="19"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="1"> </li><li role="presentation" class="k-tick k-tick-large" style="height: 3px; line-height: 3px;" title="0"><span class="k-label">0</span></li><li role="presentation" class="k-tick" style="height: 3px;" title="-1"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-19"> </li><li role="presentation" class="k-tick k-first k-tick-large" style="height: 2px;" title="-20"><span class="k-label">-20</span></li></ul><div class="k-slider-track" style="height: 120px;"><div class="k-slider-selection" style="height: 105px;"><!-- --></div><a aria-valuenow="15" aria-valuemax="20" aria-valuemin="-20" role="slider" title="drag" class="k-draghandle" href="#" tabindex="0" style="bottom: 98px;" data-role="draggable" aria-valuetext="15">Drag</a></div><input type="text" value="5" class="eqSlider" data-role="slider" style="display: none;" /></div></div>
+            <div class="k-widget k-slider k-slider-vertical eqSlider k-state-default"><div class="k-slider-wrap"><ul class="k-reset k-slider-items"><li role="presentation" class="k-tick k-last k-tick-large" style="height: 1px;" title="20"><span class="k-label">20</span></li><li role="presentation" class="k-tick" style="height: 4px;" title="19"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="1"> </li><li role="presentation" class="k-tick k-tick-large" style="height: 3px; line-height: 3px;" title="0"><span class="k-label">0</span></li><li role="presentation" class="k-tick" style="height: 3px;" title="-1"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-19"> </li><li role="presentation" class="k-tick k-first k-tick-large" style="height: 2px;" title="-20"><span class="k-label">-20</span></li></ul><div class="k-slider-track" style="height: 120px;"><div class="k-slider-selection" style="height: 60px;"><!-- --></div><a aria-valuenow="0" aria-valuemax="20" aria-valuemin="-20" role="slider" title="drag" class="k-draghandle" href="#" tabindex="0" style="bottom: 53px;" data-role="draggable" aria-valuetext="0">Drag</a></div><input type="text" value="0" class="eqSlider" data-role="slider" style="display: none;" /></div></div>
+            <div class="k-widget k-slider k-slider-vertical eqSlider k-state-default"><div class="k-slider-wrap"><ul class="k-reset k-slider-items"><li role="presentation" class="k-tick k-last k-tick-large" style="height: 1px;" title="20"><span class="k-label">20</span></li><li role="presentation" class="k-tick" style="height: 4px;" title="19"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="1"> </li><li role="presentation" class="k-tick k-tick-large" style="height: 3px; line-height: 3px;" title="0"><span class="k-label">0</span></li><li role="presentation" class="k-tick" style="height: 3px;" title="-1"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-19"> </li><li role="presentation" class="k-tick k-first k-tick-large" style="height: 2px;" title="-20"><span class="k-label">-20</span></li></ul><div class="k-slider-track" style="height: 120px;"><div class="k-slider-selection" style="height: 30px;"><!-- --></div><a aria-valuenow="-10" aria-valuemax="20" aria-valuemin="-20" role="slider" title="drag" class="k-draghandle" href="#" tabindex="0" style="bottom: 23px;" data-role="draggable" aria-valuetext="-10">Drag</a></div><input type="text" value="10" class="eqSlider" data-role="slider" style="display: none;" /></div></div>
+            <div class="k-widget k-slider k-slider-vertical eqSlider k-state-default"><div class="k-slider-wrap"><ul class="k-reset k-slider-items"><li role="presentation" class="k-tick k-last k-tick-large" style="height: 1px;" title="20"><span class="k-label">20</span></li><li role="presentation" class="k-tick" style="height: 4px;" title="19"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="1"> </li><li role="presentation" class="k-tick k-tick-large" style="height: 3px; line-height: 3px;" title="0"><span class="k-label">0</span></li><li role="presentation" class="k-tick" style="height: 3px;" title="-1"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-2"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-3"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-4"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-5"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-6"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-7"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-8"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-9"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-10"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-11"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-12"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-13"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-14"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-15"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-16"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-17"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-18"> </li><li role="presentation" class="k-tick" style="height: 3px;" title="-19"> </li><li role="presentation" class="k-tick k-first k-tick-large" style="height: 2px;" title="-20"><span class="k-label">-20</span></li></ul><div class="k-slider-track" style="height: 120px;"><div class="k-slider-selection" style="height: 15px;"><!-- --></div><a aria-valuenow="-15" aria-valuemax="20" aria-valuemin="-20" role="slider" title="drag" class="k-draghandle k-state-focused k-state-selected" href="#" tabindex="0" style="bottom: 8px;" data-role="draggable" aria-valuetext="-15">Drag</a></div><input type="text" value="15" class="eqSlider" data-role="slider" style="display: none;" /></div></div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            var slider = $("#slider").kendoSlider({
+                increaseButtonTitle: "Right",
+                decreaseButtonTitle: "Left",
+                min: -10,
+                max: 10,
+                smallStep: 2,
+                largeStep: 1
+            }).data("kendoSlider");
+
+            $(".eqSlider").kendoSlider({
+                orientation: "vertical",
+                min: -20,
+                max: 20,
+                smallStep: 1,
+                largeStep: 20,
+                showButtons: false
+            });
+        });
+    </script>
+
+    <style>
+        #wrapper {
+            width: 300px;
+            height: 255px;
+            padding: 45px 0 0 0;
+            margin: 0 auto;
+            background: url('../../content/web/slider/eqBack.png') no-repeat 0 0;
+            text-align: center;
+        }
+        #equalizer {
+            margin-top: 75px;
+            padding-right: 15px;
+        }
+        .balSlider {
+            width: 240px;
+        }
+        .balSlider .k-slider-selection {
+            width: 240px;
+            display: none;
+        }
+        .eqSlider {
+            display: inline-block;
+            zoom: 1;
+            margin: 0 12px;
+            height: 122px;
+        }
+
+        *+html .eqSlider {display:inline;}
+
+    </style>
+</div>
+    </div>
+
+        <div id="codeStrip" data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip" role="tablist" aria-activedescendant="codeStrip_ts_active" style="min-height: 531px;">
+                <a href="http://docs.kendoui.com/api/web/slider" class="documentation-link k-link"><span class="documentation-icon"></span>Documentation</a>
+
+            <ul class="k-tabstrip-items k-reset"><li class="k-item k-state-default k-first k-tab-on-top k-state-active" role="tab" aria-controls="codeStrip-1" style="" aria-selected="true" id="codeStrip_ts_active"><span class="k-loading k-complete"></span><a class="k-link">HTML</a></li><li class="k-item k-state-default" role="tab" aria-controls="codeStrip-2"><span class="k-loading k-complete"></span><a class="k-link">ASP.NET MVC</a></li><li class="k-item k-state-default" role="tab" aria-controls="codeStrip-3"><span class="k-loading k-complete"></span><a class="k-link">JSP</a></li><li class="k-item k-state-default k-last" role="tab" aria-controls="codeStrip-4"><span class="k-loading k-complete"></span><a class="k-link">PHP</a></li></ul>
+               <div id="codeStrip-1" data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip k-content k-state-active" role="tabpanel" aria-expanded="true" style="opacity: 1; display: block;" aria-activedescendant="HTML_ts_active">
+               <ul class="k-tabstrip-items k-reset"><li class="k-item k-state-default k-first k-last k-tab-on-top k-state-active" role="tab" aria-controls="HTML-1" style="" aria-selected="true" id="HTML_ts_active"><span class="k-loading k-complete" style=""></span><a class="k-link">index.html</a></li></ul>
+               <div class="k-content k-state-active" id="HTML-1" aria-expanded="true" style="opacity: 1; display: block;"><pre class="prettyprint prettyprinted" style=""><span class="dec">&lt;!DOCTYPE html&gt;</span><span class="pln">
+</span><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;head&gt;</span><span class="pln">
+    </span><span class="tag">&lt;title&gt;&lt;/title&gt;</span><span class="pln">
+    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"styles/kendo.common.min.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;link</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"styles/kendo.default.min.css"</span><span class="pln"> </span><span class="atn">rel</span><span class="pun">=</span><span class="atv">"stylesheet"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/jquery.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+    </span><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"js/kendo.all.min.js"</span><span class="tag">&gt;&lt;/script&gt;</span><span class="pln">
+</span><span class="tag">&lt;/head&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"example"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"k-content"</span><span class="tag">&gt;</span><span class="pln">
+    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"wrapper"</span><span class="tag">&gt;</span><span class="pln">
+        </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"slider"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"balSlider"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"equalizer"</span><span class="tag">&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"eqSlider"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"eqSlider"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"5"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"eqSlider"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"0"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"eqSlider"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"10"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+            </span><span class="tag">&lt;input</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"eqSlider"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"15"</span><span class="pln"> </span><span class="tag">/&gt;</span><span class="pln">
+        </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;script&gt;</span><span class="pln">
+        $</span><span class="pun">(</span><span class="pln">document</span><span class="pun">).</span><span class="pln">ready</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+            </span><span class="kwd">var</span><span class="pln"> slider </span><span class="pun">=</span><span class="pln"> $</span><span class="pun">(</span><span class="str">"#slider"</span><span class="pun">).</span><span class="pln">kendoSlider</span><span class="pun">({</span><span class="pln">
+                increaseButtonTitle</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Right"</span><span class="pun">,</span><span class="pln">
+                decreaseButtonTitle</span><span class="pun">:</span><span class="pln"> </span><span class="str">"Left"</span><span class="pun">,</span><span class="pln">
+                min</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+                max</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="pln">
+                smallStep</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln">
+                largeStep</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pln">
+            </span><span class="pun">}).</span><span class="pln">data</span><span class="pun">(</span><span class="str">"kendoSlider"</span><span class="pun">);</span><span class="pln">
+
+            $</span><span class="pun">(</span><span class="str">".eqSlider"</span><span class="pun">).</span><span class="pln">kendoSlider</span><span class="pun">({</span><span class="pln">
+                orientation</span><span class="pun">:</span><span class="pln"> </span><span class="str">"vertical"</span><span class="pun">,</span><span class="pln">
+                min</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span class="lit">20</span><span class="pun">,</span><span class="pln">
+                max</span><span class="pun">:</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln">
+                smallStep</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln">
+                largeStep</span><span class="pun">:</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln">
+                showButtons</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span><span class="pln">
+            </span><span class="pun">});</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+    </span><span class="tag">&lt;/script&gt;</span><span class="pln">
+
+    </span><span class="tag">&lt;style&gt;</span><span class="pln">
+        </span><span class="com">#wrapper {</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300px</span><span class="pun">;</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">255px</span><span class="pun">;</span><span class="pln">
+            padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">45px</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+            margin</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="kwd">auto</span><span class="pun">;</span><span class="pln">
+            background</span><span class="pun">:</span><span class="pln"> url</span><span class="pun">(</span><span class="str">'../../content/web/slider/eqBack.png'</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">no</span><span class="pun">-</span><span class="pln">repeat </span><span class="lit">0</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+            text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span class="pln"> center</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        </span><span class="com">#equalizer {</span><span class="pln">
+            margin</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:</span><span class="pln"> </span><span class="lit">75px</span><span class="pun">;</span><span class="pln">
+            padding</span><span class="pun">-</span><span class="pln">right</span><span class="pun">:</span><span class="pln"> </span><span class="lit">15px</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">balSlider </span><span class="pun">{</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">240px</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">balSlider </span><span class="pun">.</span><span class="pln">k</span><span class="pun">-</span><span class="pln">slider</span><span class="pun">-</span><span class="pln">selection </span><span class="pun">{</span><span class="pln">
+            width</span><span class="pun">:</span><span class="pln"> </span><span class="lit">240px</span><span class="pun">;</span><span class="pln">
+            display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+        </span><span class="pun">.</span><span class="pln">eqSlider </span><span class="pun">{</span><span class="pln">
+            display</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">inline</span><span class="pun">-</span><span class="pln">block</span><span class="pun">;</span><span class="pln">
+            zoom</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1</span><span class="pun">;</span><span class="pln">
+            margin</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">12px</span><span class="pun">;</span><span class="pln">
+            height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">122px</span><span class="pun">;</span><span class="pln">
+        </span><span class="pun">}</span><span class="pln">
+
+        </span><span class="pun">*+</span><span class="pln">html </span><span class="pun">.</span><span class="pln">eqSlider </span><span class="pun">{</span><span class="pln">display</span><span class="pun">:</span><span class="kwd">inline</span><span class="pun">;}</span><span class="pln">
+
+    </span><span class="tag">&lt;/style&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span><span class="pln">
+
+
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre></div></div>
+               <script>
+               var minHeightFlag = false;
+               $("#HTML").kendoTabStrip({
+                    animation: {
+                        open: {
+                            effects: "fadeIn"
+                        }
+                    },
+                    contentUrls: [
+                        "/source?path=~%2FViews%2Fweb%2Fslider%2Findex.cshtml"
+                    ],
+                    contentLoad: function(e) {
+                        prettyPrint();
+                        if (!minHeightFlag) {
+                            var cs = $("#codeStrip");
+                            cs.css("min-height", cs.height());
+                        }
+                    }
+               });
+               </script>
+               <div id="codeStrip-2" data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip k-content" role="tabpanel" aria-hidden="true" aria-expanded="false">
+               <ul class="k-tabstrip-items k-reset"><li class="k-item k-state-default k-first" role="tab" aria-controls="ASP-NET-MVC-1"><a class="k-link">index.aspx</a></li><li class="k-item k-state-default" role="tab" aria-controls="ASP-NET-MVC-2"><a class="k-link">index.cshtml</a></li><li class="k-item k-state-default k-last" role="tab" aria-controls="ASP-NET-MVC-3"><a class="k-link">IndexController.cs</a></li></ul>
+               <div class="k-content" id="ASP-NET-MVC-1"></div><div class="k-content" id="ASP-NET-MVC-2"></div><div class="k-content" id="ASP-NET-MVC-3"></div></div>
+               <script>
+               var minHeightFlag = false;
+               $("#ASP-NET-MVC").kendoTabStrip({
+                    animation: {
+                        open: {
+                            effects: "fadeIn"
+                        }
+                    },
+                    contentUrls: [
+                        "/source?path=~%2Fsrc%2Faspnetmvc%2Fviews%2Faspx%2Fweb%2Fslider%2Findex.aspx","/source?path=~%2Fsrc%2Faspnetmvc%2Fviews%2Frazor%2Fweb%2Fslider%2Findex.cshtml","/source?path=~%2Fsrc%2Faspnetmvc%2Fcontrollers%2Fweb%2FSlider%2FIndexController.cs"
+                    ],
+                    contentLoad: function(e) {
+                        prettyPrint();
+                        if (!minHeightFlag) {
+                            var cs = $("#codeStrip");
+                            cs.css("min-height", cs.height());
+                        }
+                    }
+               });
+               </script>
+               <div id="codeStrip-3" data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip k-content" role="tabpanel" aria-hidden="true" aria-expanded="false">
+               <ul class="k-tabstrip-items k-reset"><li class="k-item k-state-default k-first" role="tab" aria-controls="JSP-1"><a class="k-link">index.jsp</a></li><li class="k-item k-state-default k-last" role="tab" aria-controls="JSP-2"><a class="k-link">IndexController.java</a></li></ul>
+               <div class="k-content" id="JSP-1"></div><div class="k-content" id="JSP-2"></div></div>
+               <script>
+               var minHeightFlag = false;
+               $("#JSP").kendoTabStrip({
+                    animation: {
+                        open: {
+                            effects: "fadeIn"
+                        }
+                    },
+                    contentUrls: [
+                        "/source?path=~%2Fsrc%2Fjsp%2Fviews%2Fweb%2Fslider%2Findex.jsp","/source?path=~%2Fsrc%2Fjsp%2Fcontrollers%2Fslider%2FIndexController.java"
+                    ],
+                    contentLoad: function(e) {
+                        prettyPrint();
+                        if (!minHeightFlag) {
+                            var cs = $("#codeStrip");
+                            cs.css("min-height", cs.height());
+                        }
+                    }
+               });
+               </script>
+               <div id="codeStrip-4" data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip k-content" role="tabpanel" aria-hidden="true" aria-expanded="false">
+               <ul class="k-tabstrip-items k-reset"><li class="k-item k-state-default k-first k-last" role="tab" aria-controls="PHP-1"><a class="k-link">index.php</a></li></ul>
+               <div class="k-content" id="PHP-1"></div></div>
+               <script>
+               var minHeightFlag = false;
+               $("#PHP").kendoTabStrip({
+                    animation: {
+                        open: {
+                            effects: "fadeIn"
+                        }
+                    },
+                    contentUrls: [
+                        "/source?path=~%2Fsrc%2Fphp%2Fweb%2Fslider%2Findex.php"
+                    ],
+                    contentLoad: function(e) {
+                        prettyPrint();
+                        if (!minHeightFlag) {
+                            var cs = $("#codeStrip");
+                            cs.css("min-height", cs.height());
+                        }
+                    }
+               });
+               </script>
+        </div>
+        <script>
+            $("#codeStrip").kendoTabStrip({
+                animation: {
+                    open: {
+                        effects: "fadeIn"
+                    }
+                },
+                select: function(e) {
+                    var tabstrip = $(e.contentElement).data("kendoTabStrip");
+                    if (tabstrip.select().length == 0) {
+                        tabstrip.select(0);
+                    }
+                }
+            })
+            .data("kendoTabStrip")
+            .select(0);
+
+        </script>
+</div>
+
+<script>
+    setTimeout(function(){ prettyPrint(); }, 100);
+
+    document.title = "Kendo jQuery Slider Control Demo";
+
+</script>
+
+
+            </div>
+
+        </div>
+    </div></div>
+
+    <div id="footer">
+    <div class="centerWrap">
+        <ul class="bottom-nav">
+            <li><a href="http://www.kendoui.com/">Home</a></li>
+            <li><a href="http://www.kendoui.com/web.aspx">Web</a></li>
+            <li><a href="http://www.kendoui.com/mobile.aspx">Mobile</a></li>
+            <li><a href="http://www.kendoui.com/dataviz.aspx">DataViz</a></li>
+            <li><a href="http://www.kendoui.com/server-wrappers.aspx">Server Wrappers</a></li>
+            <li><a href="http://www.kendoui.com/whitepapers.aspx">Whitepapers</a></li>
+            <li><a href="http://www.kendoui.com/surveys.aspx">Surveys</a></li>
+            <li><a href="http://www.kendoui.com/chrome.aspx">Chrome</a></li>
+            <li><a target="_blank" href="http://www.icenium.com">Icenium</a></li>
+            <li><a href="http://www.kendoui.com/contact.aspx">Contact Us</a></li>
+        </ul>
+
+        <p>Take your time to truly experience the power of Kendo UI.</p>
+        <p><a href="http://www.kendoui.com/download.aspx">Download</a> your Kendo UI and jumpstart your development with the available <a href="http://www.kendoui.com/get-help.aspx">support resources</a>.</p>
+        <p>If you have any questions, do not hesitate to contact us at <a href="mailto:clientservice@kendoui.com">clientservice@kendoui.com</a>.</p>
+
+        <div id="social">
+            <h2>Get Social!</h2>
+
+            <ul>
+                <li><a title="Follow us on Twitter" class="icon tw" href="http://twitter.com/#%21/KendoUI">Follow us on Twitter</a></li>
+                <li><a title="Become a fan on Facebook" class="icon fb" href="http://www.facebook.com/KendoUI">Become a fan on Facebook</a></li>
+                <li><a title="Follow us on Google+" class="icon gplus" href="https://plus.google.com/117798269023828336983/posts">Follow us on Google+</a></li>
+                <li><a title="Subscribe to our RSS feed" class="icon rss" href="http://www.kendoui.com/blogs/blogs.rss">Subscribe to our RSS feed</a></li>
+            </ul>
+        </div>
+
+        <p id="copy">Copyright © 2011 - 2013 Telerik Inc. All rights reserved.</p>
+    </div>
+</div>
+
+
+    <script>
+
+        if ("pushState" in history) {
+            $(".demos-nav").on("click", "a", function(e) {
+                var a = $(this),
+                    li = a.parent();
+
+                if (a.attr("target")) {
+                    return;
+                }
+
+                e.preventDefault();
+
+                if (li.hasClass("active")) {
+                    return;
+                }
+
+                Application.loadWidget(a.attr("href"));
+            });
+        }
+
+        $("#themeChooser").kendoThemeChooser();
+
+        $("#deviceChooser").mobileOsChooser({
+            container: "#mobile-application-container"
+        });
+
+            
+                applyCurrentTheme();
+            
+
+    </script>
+
+
+<div class="k-widget k-tooltip k-slider-tooltip" style="top: 670.9px; left: 1100.67px; opacity: 1;">-15<div class="k-callout k-callout-e"><!-- --></div></div></body><canvas id="fxdriver-screenshot-canvas" style="display: none;" width="1920" height="1499"></canvas></html>
